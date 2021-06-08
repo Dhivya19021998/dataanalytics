@@ -2,34 +2,26 @@
     <head>
         <title>View images</title>
         <link rel="stylesheet" href="style.css">
+        <script>
+            var globalsrc;
+            function getCurrentSrc(currentVal){
+                globalsrc=currentVal.src;
+            }
+            function thankJs(){
+                document.location.href='thank_you.html?name=' + globalsrc;
+            }
+        </script>
         </head>
         <body>
-            <div class="images">
-
-                <a href="#" id="img1" onclick="document.location=this.id+'.html';return false;" >
-                    <img src="img1.jpg" alt="img" class="thumbnails" />
-                </a>
-                <br><br>
-                <a href="#" id="img2" onclick="document.location=this.id+'.html';return false;">
-                    <img src="img2.jpg" alt="img" class="thumbnails" />
-                </a>
-
-                <br><br>
-                <a href="#" id="img3" onclick="document.location=this.id+'.html';return false;" >
-                    <img src="img3.jpg" alt="img" class="thumbnails" />
-                </a>
-
-                <br><br>
-                <a href="#" id="img4" onclick="document.location=this.id+'.html';return false;" >
-                    <img src="img4.jpg" alt="img" class="thumbnails" />
-                </a>
-
-                <br><br>
-                <a href="#" id="img5" onclick="document.location=this.id+'.html';return false;" >
-                    <img src="img5.jpg" alt="img" class="thumbnails" />
-                </a>
-                <br><br>
-            </div>
-            
+           
+            <div class="images" style="padding:80px;">
+                <h1 class="text">Please select an image and click Next</h1>
+                <img id='1' class="column" src="img1.jpg" width="200px" height="200px" onclick="getCurrentSrc(this)">
+                <img id='1' class="column" src="img2.jpg" width="200px" height="200px" onclick="getCurrentSrc(this)">
+                <img id='1' class="column" src="img3.jpg" width="200px" height="200px" onclick="getCurrentSrc(this)">
+                <img id='1' class="column" src="img4.jpg" width="200px" height="200px" onclick="getCurrentSrc(this)">
+                <img id='1' class="column" src="img5.jpg" width="200px" height="200px" onclick="getCurrentSrc(this)">
+             </div> 
+             <button onclick="thankJs()">Next</button>      
         </body>
         </html>
